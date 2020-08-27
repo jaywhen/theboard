@@ -17,4 +17,4 @@ def index():
         db.session.commit()
         flash('发送成功！👐🙌👌')
         return redirect(url_for('index'))
-    return render_template('index.html', form = form, messages = messages)
+    return render_template('index.html', form = form, messages = messages) 

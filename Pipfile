@@ -5,6 +5,7 @@ verify_ssl = true
 
 [dev-packages]
 watchdog = "*"
+faker = "*"
 
 [packages]
 flask = "*"
@@ -12,6 +13,7 @@ python-dotenv = "*"
 flask-wtf = "*"
 flask-sqlalchemy = "*"
 bootstrap-flask = "*"
+flask-moment = "*"
 
 [requires]
 python_version = "3.8"

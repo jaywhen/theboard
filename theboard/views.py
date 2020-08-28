@@ -7,7 +7,6 @@ from theboard.forms import BoardForm
 @app.route('/', methods = ['GET', 'POST'])
 def index():
     # 加载所有记录
-    messages = Message.query.order_by(Message.timestamp.desc()).all()
     form = BoardForm()
     if form.validate_on_submit():
         name = form.name.data
@@ -17,4 +16,6 @@ def index():
         db.session.commit()
         flash('发送成功！👐🙌👌')
         return redirect(url_for('index'))
+        
+    messages = Message.query.order_by(Message.timestamp.desc()).all()
     return render_template('index.html', form = form, messages = messages) 
